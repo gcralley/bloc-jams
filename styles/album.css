@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-body.album {
-=======
+
  body.album {
->>>>>>> checkpoint6
      background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
      background-repeat: no-repeat;
      background-attachment: fixed;
@@ -38,7 +35,6 @@ body.album {
      font-size: 0.75rem;
  }
 
-<<<<<<< HEAD
  .album-view-song-list {
      width: 90%;
      margin: 1.5rem auto;
@@ -83,7 +79,6 @@ body.album {
          margin: auto;
      }
  }
-=======
 .album-view-song-list {
     width: 90%;
     margin: 1.5rem auto;
@@ -127,4 +122,3 @@ song-item-duration {
         margin: auto;
     }
 }
->>>>>>> checkpoint6
