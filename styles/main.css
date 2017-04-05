@@ -89,9 +89,15 @@ body.landing {
     max-width: 64rem;
 }
 
+<<<<<<< HEAD
 .container.narrow {
     max-width: 56rem;
 }
+=======
+ .container.narrow {
+     max-width: 56rem;
+ }
+>>>>>>> checkpoint6
 
 .clearfix::before, .clearfix::after {
     content: " ";
