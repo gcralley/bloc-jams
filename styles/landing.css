@@ -45,7 +45,7 @@ body.landing {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
     transform: rotate(360deg);
-    background-color:Magenta;
+    background-color:indigo;
 }
 
 .point .point-title {
