@@ -1,4 +1,4 @@
- var albumPicasso = {
+var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
      label: 'Cubism',
@@ -119,8 +119,8 @@ var clickHandler = function(targetElement) {
      songItem.innerHTML = pauseButtonTemplate;
      currentlyPlayingSong = songItem.getAttribute('data-song-number');
      } else if (currentlyPlayingSong === songItem.getAttribute('data-song-number')) {
-         songItem.innerHTML = playButtonTemplate;
-         currentlyPlayingSong = null;
+    songItem.innerHTML = playButtonTemplate;
+     currentlyPlayingSong = null;
      } else if (currentlyPlayingSong !== songItem.getAttribute('data-song-number')) {
      var currentlyPlayingSongElement = document.querySelector('[data-song-number="' + currentlyPlayingSong + '"]');
      currentlyPlayingSongElement.innerHTML = currentlyPlayingSongElement.getAttribute('data-song-number');
@@ -131,6 +131,7 @@ var clickHandler = function(targetElement) {
 };
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+
 var songRows = document.getElementsByClassName('album-view-song-item');
 
  var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
@@ -143,15 +144,15 @@ var songRows = document.getElementsByClassName('album-view-song-item');
      setCurrentAlbum(albumPicasso);
  
      songListContainer.addEventListener('mouseover', function(event) {
-         if (event.target.parentElement.className === 'album-view-song-item') {
-        event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;     
+         if (event.target.parentElement.className === 'album-view-song-item') {  
         var songItem = getSongItem(event.target);
 
-        if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
+          if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
           songItem.innerHTML = playButtonTemplate;
             }
          }
      });
+ 
      
      for (var i = 0; i < songRows.length; i++) {
          songRows[i].addEventListener('mouseleave', function(event) {
@@ -163,6 +164,7 @@ var songRows = document.getElementsByClassName('album-view-song-item');
                  songItem.innerHTML = songItemNumber;
              }
          });
+         
          
          songRows[i].addEventListener('click', function(event) {
              clickHandler(event.target);
