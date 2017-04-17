@@ -1,4 +1,6 @@
- var animatePoints = function() {
+var pointsArray = document.getElementsByClassName('point'); 
+
+var animatePoints = function() {
          var revealPoint = function() {
             $(this).css({
              opacity: 1,
