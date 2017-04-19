@@ -13,8 +13,7 @@ var albumPicasso = {
      ]
  };
  
- 
- var albumMarconi = {
+  var albumMarconi = {
      title: 'The Telephone',
      artist: 'Guglielmo Marconi',
      label: 'EM',
@@ -28,21 +27,6 @@ var albumPicasso = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
-
-var albumLorca = {
-    title: 'The Aurora',
-    artist: 'Federico Garcia Lorca',
-    label: 'El Surrealismo',
-    year: '1914',
-    albumArtUrl: 'assets/images/album_covers/lorca.jpg',
-    songs: [
-        { title: 'Bodas de Sangre', duration: '2:30' },
-        { title: 'Poeta en Nueva York', duration: '3:01' },
-        { title: 'No me digas eso', duration: '1:30' },
-        { title: 'Fin de semana', duration: '7:22' },
-        { title: 'La muerte, sin ti', duration: '4:15' }
-    ]
-};
 
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
@@ -116,19 +100,15 @@ var albumTitle = document.getElementsByClassName('album-view-title')[0];
      $albumArtist.text(album.artist);
      $albumReleaseInfo.text(album.year + ' ' + album.label);
      $albumImage.attr('src', album.albumArtUrl);
- 
- 
+  
      $albumSongList.empty();
  
- 
-     for (var i = 0; i < album.songs.length; i++) {
+      for (var i = 0; i < album.songs.length; i++) {
         var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
          $albumSongList.append($newRow);
      }
  };
  
-
-
  var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
 
  var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
