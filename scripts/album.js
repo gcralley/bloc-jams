@@ -128,7 +128,6 @@ var clickHandler = function(targetElement) {
      songItem.innerHTML = pauseButtonTemplate;
      currentlyPlayingSong = songItem.getAttribute('data-song-number');
      }
-    
 };
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
@@ -154,8 +153,7 @@ var songRows = document.getElementsByClassName('album-view-song-item');
          }
      });
  
-     
-     for (var i = 0; i < songRows.length; i++) {
+      for (var i = 0; i < songRows.length; i++) {
          songRows[i].addEventListener('mouseleave', function(event) {
              var songItem = getSongItem(event.target);
              var songItemNumber = songItem.getAttribute('data-song-number');
@@ -166,8 +164,7 @@ var songRows = document.getElementsByClassName('album-view-song-item');
              }
          });
          
-         
-         songRows[i].addEventListener('click', function(event) {
+          songRows[i].addEventListener('click', function(event) {
              clickHandler(event.target);
          });
      }
